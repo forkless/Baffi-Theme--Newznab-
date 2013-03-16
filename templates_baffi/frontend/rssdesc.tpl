@@ -9,7 +9,7 @@
 
 <ul>
 	<li>
-		Add this string to your feed URL to allow NZB downloads without logging in: <code>&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}</code>
+		Add this string to your feed URL to allow NZB downloads without logging in: <code>&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}</code>
 	</li>
 	<li>
 		To remove the NZB from your cart after download add this string to your feed URL: <code>&amp;del=1</code> 
@@ -38,19 +38,19 @@
 <ul style="text-align: left;">
 	<li>
 		Full site : 
-		<code><a href="{$smarty.const.WWW_TOP}/RSS?t=0&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}">{$smarty.const.WWW_TOP}/RSS?t=0&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}</a></code>
+		<code><a href="{$smarty.const.WWW_TOP}/rss?t=0&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}">{$smarty.const.WWW_TOP}/rss?t=0&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}</a></code>
 	</li><br/>
 	<li>
 		<a href="{$smarty.const.WWW_TOP}/cart">My cart</a> : 
-		<code><a href="{$smarty.const.WWW_TOP}/RSS?t=-2&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}&amp;del=1">{$smarty.const.WWW_TOP}/RSS?t=-2&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}&amp;del=1</a></code>
+		<code><a href="{$smarty.const.WWW_TOP}/rss?t=-2&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}&amp;del=1">{$smarty.const.WWW_TOP}/rss?t=-2&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}&amp;del=1</a></code>
 	</li><br/>
 	<li>
 		<a href="{$smarty.const.WWW_TOP}/myshows">My shows</a> : 
-		<code><a href="{$smarty.const.WWW_TOP}/RSS?t=-3&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}&amp;del=1">{$smarty.const.WWW_TOP}/RSS?t=-3&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}&amp;del=1</a></code>
+		<code><a href="{$smarty.const.WWW_TOP}/rss?t=-3&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}&amp;del=1">{$smarty.const.WWW_TOP}/rss?t=-3&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}&amp;del=1</a></code>
 	</li><br/>
 	<li>
 		<a href="{$smarty.const.WWW_TOP}/mymovies">My movies</a> : 
-		<code><a href="{$smarty.const.WWW_TOP}/RSS?t=-4&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}&amp;del=1">{$smarty.const.WWW_TOP}/RSS?t=-4&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}&amp;del=1</a></code>
+		<code><a href="{$smarty.const.WWW_TOP}/rss?t=-4&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}&amp;del=1">{$smarty.const.WWW_TOP}/rss?t=-4&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}&amp;del=1</a></code>
 	</li><br/>
 
 </ul>
@@ -59,7 +59,7 @@
 	{foreach from=$parentcategorylist item=category}
 	<li>
 		<a href="{$smarty.const.WWW_TOP}/browse?t={$category.ID}">{$category.title}</a></code> feed: 
-		<code><a href="{$smarty.const.WWW_TOP}/RSS?t={$category.ID}&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}">{$smarty.const.WWW_TOP}/RSS?t={$category.ID}&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}</a></code>
+		<code><a href="{$smarty.const.WWW_TOP}/rss?t={$category.ID}&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}">{$smarty.const.WWW_TOP}/rss?t={$category.ID}&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}</a></code>
 	</li><br/>
 	{/foreach}
 
@@ -71,7 +71,7 @@
 	{foreach from=$categorylist item=category}
 	<li>
 		<a href="{$smarty.const.WWW_TOP}/browse?t={$category.ID}">{$category.title}</a> feed: 
-		<code><a href="{$smarty.const.WWW_TOP}/RSS?t={$category.ID}&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}">{$smarty.const.WWW_TOP}/RSS?t={$category.ID}&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}</a></code>
+		<code><a href="{$smarty.const.WWW_TOP}/rss?t={$category.ID}&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}">{$smarty.const.WWW_TOP}/rss?t={$category.ID}&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}</a></code>
 	</li><br/>
 	{/foreach}
 </ul>
@@ -80,7 +80,7 @@
 <ul style="text-align: left;">
 	<li>
 		Multiple categories separated by comma.<br/>
-		<code><a href="{$smarty.const.WWW_TOP}/RSS?t=1000,2000,3010&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}">{$smarty.const.WWW_TOP}/RSS?t=1000,2000,3010&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}</a></code>
+		<code><a href="{$smarty.const.WWW_TOP}/rss?t=1000,2000,3010&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}">{$smarty.const.WWW_TOP}/rss?t=1000,2000,3010&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}</a></code>
 	</li><br/>
 </ul>
 
@@ -88,14 +88,14 @@
 <ul style="text-align: left;">
 	<li>
 		Tv Series (Use the TVRage ID)<br/>
-		<code><a href="{$smarty.const.WWW_TOP}/RSS?rage=1234&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}">{$smarty.const.WWW_TOP}/RSS/?rage=1234&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}</a></code>
+		<code><a href="{$smarty.const.WWW_TOP}/rss?rage=1234&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}">{$smarty.const.WWW_TOP}/RSS/?rage=1234&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}</a></code>
 	</li><br/>
 	<li>
 		Tv Series aired in last seven days (Using the TVRage ID and airdate)<br/>
-		<code><a href="{$smarty.const.WWW_TOP}/RSS?rage=1234&amp;airdate=7&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}">{$smarty.const.WWW_TOP}/RSS/?rage=1234&amp;airdate=7&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}</a></code>
+		<code><a href="{$smarty.const.WWW_TOP}/rss?rage=1234&amp;airdate=7&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}">{$smarty.const.WWW_TOP}/RSS/?rage=1234&amp;airdate=7&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}</a></code>
 	</li><br/>
 	<li>
 		Anime Feed (Use the AniDB ID)<br/>
-		<code><a href="{$smarty.const.WWW_TOP}/RSS?anidb=1234&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}">{$smarty.const.WWW_TOP}/RSS/?anidb=1234&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.RSStoken}</a></code>
+		<code><a href="{$smarty.const.WWW_TOP}/rss?anidb=1234&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}">{$smarty.const.WWW_TOP}/RSS/?anidb=1234&amp;dl=1&amp;i={$userdata.ID}&amp;r={$userdata.rsstoken}</a></code>
 	</li><br/>
 </ul>
